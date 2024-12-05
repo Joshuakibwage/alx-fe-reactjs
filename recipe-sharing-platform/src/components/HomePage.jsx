@@ -1,9 +1,9 @@
-
+import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react'
 
 const HomePage = () => {
 
-    const [recipes, setRecipes] = useState();
+    const [recipes, setRecipes] = useState([]);
 
     useEffect(() => {
       fetch("/src/data.json")
