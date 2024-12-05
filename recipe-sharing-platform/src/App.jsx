@@ -1,11 +1,11 @@
- import HomPage from "./components/HomPage"
+ import HomePage from "./components/HomePage"
 
 function App() {
 
   return (
     <>
       <div>
-        <HomPage />
+        <HomePage />
       </div>
     </>
   )
