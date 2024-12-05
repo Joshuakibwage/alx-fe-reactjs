@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react'
 
-const HomPage = () => {
+const HomePage = () => {
 
     const [recipes, setRecipes] = useState();
 
@@ -32,4 +32,4 @@ const HomPage = () => {
   )
 }
 
-export default HomPage
+export default HomePage
