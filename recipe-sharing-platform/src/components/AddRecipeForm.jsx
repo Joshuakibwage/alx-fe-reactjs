@@ -88,6 +88,7 @@
                 <button 
                     type="submit"
                      className="w-full py-2 px-4 text-white bg-indigo-600 rounded-md hover:bg-indigo-500 focus:outline-none focus:ring focus:ring-indigo-300"
+                     onSubmit={}
                     >Submit Recipe</button>
         </div>
      </form>
