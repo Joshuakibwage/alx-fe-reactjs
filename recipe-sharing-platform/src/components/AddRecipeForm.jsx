@@ -1,30 +1,37 @@
-import { Link } from "react-router-dom"
-import { useState, useEffect } from "react"
+ import { useState } from "react";
 
-function AddRecipeForm() {
-    const [formData, setFormData] = useState([]);
+ 
+ const AddRecipeForm = () => {
 
-    useEffect(() => {
+    const [title, setTitle] = useState('');
+    const [ingredients, setIngredients] = useState('');
+    const [steps, setSteps] = useState('');
+    const [errors, setErrors] = useState({});
 
-    }, []);
-  return (
-    <div>
-        <form>
-            <label htmlFor="title">Title</label>
-            <input type="title" name="title" id="title" />
-            <label htmlFor="ingredients">Ingredients</label>
-            <textarea id="textarea" typeof="textarea">
-                
-            </textarea>
-            <label htmlFor="steps">Preparation steps</label>
-            <textarea name="steps" id="steps">
 
-            </textarea>
-            <input type="submit" value="submit" />
 
-        </form>
-    </div>
-  )
-}
+   return (
+     <form>
+        <h2>Add New Recipes</h2>
+        <div>
+            <label 
+                htmlFor="title">Recipe Title</label>
 
-export default AddRecipeForm
+            <input 
+                type="text" 
+                name="title" 
+                id="title" 
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
+                className={`w-full p-2 mt-1 border ${
+                    errors.title ? 'border-red-500' : 'border-gray-300'
+                }rounded-md focus:ring focus:ring-indigo-200`}
+                placeholder="chocolate cake"
+            />
+             {errors.title && <p className="text-red-500 text-sm">{errors.title}</p>}
+        </div>
+     </form>
+   )
+ }
+ 
+ export default AddRecipeForm
