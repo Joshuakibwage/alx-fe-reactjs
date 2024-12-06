@@ -30,7 +30,7 @@
     }
 
    return (
-     <form>
+     <form className="shadow-lg">
         <h2>Add New Recipes</h2>
         <div>
             <label 
