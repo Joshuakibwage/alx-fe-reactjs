@@ -1,10 +1,9 @@
- import React from "react";
+import SearchInput from "./components/SearchInput";
 
 function App() {
   return (
     <div className="App">
-      <h1>GitHub User Search</h1>
-      {/* Add components here in the future */}
+      <SearchInput />
     </div>
   );
 }
