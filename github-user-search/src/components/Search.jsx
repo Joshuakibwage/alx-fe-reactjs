@@ -15,21 +15,28 @@ const Search = () => {
       const response = await axios.get(`https://api.github.com/users/${username}`);
       setUserData(response.data);
     } catch (err) {
-      setError("Looks like we can’t find the user");
+      setError(["Looks like we can’t find the user"]);
     }
     setLoading(false);
   };
 
   return (
-    <div>
+    <div className='w-1/2 h-full  mx-auto shadow-lg shadow-red-400 shadow-opacity-5 flex justify-center items-center flex-col
+    bg-slate-300
+    '>
       <form onSubmit={handleSearch}>
         <input
           type="text"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           placeholder="Enter GitHub username"
+          className='my-4 rounded-md border-red-700 border-2'
+          
         />
-        <button type="submit">Search</button>
+        <br />
+        <button
+        className='bg-gradient-to-r from-orange-400 to-red-800 px-6 py-1 rounded-lg text-white font-bold'
+        type="submit">Search</button>
       </form>
       {loading && <p>Loading...</p>}
       {error && <p>{error}</p>}
